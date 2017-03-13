@@ -1,6 +1,6 @@
 
 (function localFileVideoPlayer() {
- var $canvas = $('#canvas')
+
 	function captureFrame(){
     	var video = document.getElementById('video')
       console.log ("video")
@@ -21,6 +21,8 @@
   
   }
 	$("#captureButton").on('click', captureFrame);
+
+  //upload video data to browser
 	function uploadVideoFile (event) {
       function dataUploaded(){
         console.log ('data uploaded')
@@ -33,7 +35,7 @@
       fr.readAsDataURL(file);
   }
   
-  
+  //play vid when changed 
   function playSelectedFile (event) {
       var URL = window.URL || window.webkitURL
       var displayMessage = function (message, isError) {
@@ -59,6 +61,7 @@
   
   }  
   
+  // add play or upload event listenter here
   var $inputNode = $('.video-input')
   $inputNode[0].addEventListener('change', playSelectedFile, false)
 
