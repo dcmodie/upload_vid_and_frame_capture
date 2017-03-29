@@ -17,11 +17,7 @@
 //			$canvas[0].getContext('2d').drawImage(video, 0, 0,video.videoWidth, video.videoHeight);
 			$canvas[0].getContext('2d').drawImage(video, 0, 0,video.videoWidth, video.videoHeight,0,0,video.videoWidth, video.videoHeight);
   
-  
-  
   }
-	$("#captureButton").on('click', captureFrame);
-
   //upload video data to browser
 	function uploadVideoFile (event) {
       function dataUploaded(){
@@ -61,8 +57,8 @@
   
   }  
   
-  // add play or upload event listenter here
-  var $inputNode = $('.video-input')
+  $("#capture-button").on('click', captureFrame);
+  var $inputNode = $('#video-input')
   $inputNode[0].addEventListener('change', playSelectedFile, false)
 
 
