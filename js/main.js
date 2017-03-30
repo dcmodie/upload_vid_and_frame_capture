@@ -10,7 +10,11 @@
       console.log ("height")
       console.log (video.videoHeight)
       var $canvas = $('<canvas></canvas>');
-      $canvas.css("width", video.videoWidth)
+      // $canvas.css("width", video.videoWidth)
+      // $canvas.css("height", video.videoHeight)
+     $canvas[0].width = video.videoWidth;
+     $canvas[0].height = video.videoHeight;  
+
       var $canvasContainer = $('#canvas-container');
       $canvasContainer.empty();
       $canvasContainer.append($canvas);
